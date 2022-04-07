@@ -9,12 +9,23 @@ const app = Vue.createApp({
     methods: {
         divSelected(id) {
             if (id === 1) {
-                this.div1Selected = true;
+                this.div1Selected = !this.div1Selected;
             } else if (id === 2) {
-                this.div2Selected = true;
+                this.div2Selected = !this.div2Selected;
             } else if (id === 3) {
-                this.div3Selected = true;
+                this.div3Selected = !this.div3Selected;
             }
+        }
+    },
+    computed: {
+        div1Classes() {
+            return { isSelected: this.div1Selected }
+        },
+        div2Classes() {
+            return { isSelected: this.div2Selected }
+        },
+        div3Classes() {
+            return { isSelected: this.div3Selected }
         }
     }
 })

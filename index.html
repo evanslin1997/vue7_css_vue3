@@ -22,15 +22,15 @@
       </p>
     <![endif]-->
     <section id="app">
-        <div class="demo" :class="{isSelected:div1Selected}" @click="divSelected(1)">
-            Mountain
-          </div>
-          <div class="demo" :class="{isSelected:div2Selected}" @click="divSelected(2)">
-            Sky
-          </div>
-          <div class="demo" :class="{isSelected:div3Selected}" @click="divSelected(3)">
-            Ocean
-          </div>
-    </section>
+        <div class="demo" :class="div1Classes" @click="divSelected(1)">
+          Mountain
+        </div>
+        <div class="demo" :class="div2Classes" @click="divSelected(2)">
+          Sky
+        </div>
+        <div class="demo" :class="div3Classes" @click="divSelected(3)">
+          Ocean
+        </div>
+      </section>
   </body>
 </html>
